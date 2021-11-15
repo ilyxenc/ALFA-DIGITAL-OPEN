@@ -32,7 +32,7 @@ body {
     min-height: 100vh;
 }
 /* , #menuLeft, #menuRight */
-#program, #speakers, #businessCards, #alphaButton {
+#program, #speakers, #businessCards, #alfaButton {
     opacity: 0;
     position: relative;
 }
@@ -343,11 +343,11 @@ emoji-picker {
     top: 14px;
 }
 
-.header, .questions, .program, .businessCards, .alphaButton {
+.header, .questions, .program, .businessCards, .alfaButton {
     margin-top: 90px;
 }
 
-.alphaButton {
+.alfaButton {
     margin-bottom: 90px;
 }
 
@@ -637,13 +637,13 @@ emoji-picker {
     top: 10px;
 }
 
-.alphaButton {
+.alfaButton {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.alphaButton a {
+.alfaButton a {
     font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-style: normal;
@@ -657,7 +657,7 @@ emoji-picker {
     display: block;
 }
 
-.alphaButtonShape1 {
+.alfaButtonShape1 {
     position: absolute;
     z-index: -1;
     width: 80px;
@@ -667,7 +667,7 @@ emoji-picker {
     bottom: -50px;
 }
 
-.alphaButtonShape2 {
+.alfaButtonShape2 {
     position: absolute;
     z-index: -1;
     width: 42px;
@@ -677,7 +677,7 @@ emoji-picker {
     bottom: -22px;
 }
 
-.alphaButtonBlock {
+.alfaButtonBlock {
     position: relative;
 }
 
@@ -788,7 +788,7 @@ emoji-picker {
         font-size: 14px;
         line-height: 18px;
     }
-    .alphaButton a {
+    .alfaButton a {
         font-size: 16px;
         line-height: 22px;
         padding: 16px 20px;
@@ -836,7 +836,7 @@ emoji-picker {
     .programData {
         flex-wrap: wrap;
     }
-    .alphaButton a {
+    .alfaButton a {
         padding: 6px 20px;
     }
     .headerShape1 {
