@@ -1,0 +1,859 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background: #000000;
+    position: relative;
+    min-height: 100vh;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    /* font-smoothing: antialiased; */
+    overflow: hidden;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
+.body {
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+/* , #menuLeft, #menuRight */
+#program, #speakers, #businessCards, #alphaButton {
+    opacity: 0;
+    position: relative;
+}
+
+.showBlockBottom {
+    animation: showBlockBottom 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showBlockBottom {
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+.showBlockLeft {
+    animation: showBlockLeft 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showBlockLeft {
+    0% {
+        opacity: 0;
+        left: -100px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+.showBlockRight {
+    animation: showBlockRight 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showBlockRight {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 24px 0 0;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 574px;
+    width: 100%;
+}
+
+.menuItem span {
+    display: block;
+    flex: 0 1 40px;
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menuLeft {
+    opacity: 0;
+    position: relative;
+    animation: showBlockLeft 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+#menuRight {
+    opacity: 0;
+    position: relative;
+    animation: showBlockRight 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+.blockMax1160 {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+.video {
+    max-width: 760px;
+    width: 65.5%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.videoFrame {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.chat {
+    height: 100%;
+    width: 34.5%;
+    max-width: 401px;
+    background-color: #1F2B2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.chatLabel {
+    width: 100%;
+    padding: 14px 0 12px 16px;
+    box-sizing: inherit;
+    background-color: #E7362A;
+}
+
+.chatLabelText {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.messages {
+    height: calc(100% - 50px - 20px - 50px - 20px);
+    width: 100%;
+    box-sizing: inherit;
+    padding: 0 20px;
+    margin: 0 auto 20px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    margin-top: 12px;
+}
+
+.messageName {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E7362A;
+    margin-bottom: 4px;
+}
+
+.messageText {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.messageMine, .messageMine .messageName, .messageMine .messageText {
+    text-align: right !important;
+}
+
+.inputFieldBg {
+    background-color: #575F5F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 13px 16px;
+    border: 1px solid #818787;
+    width: 100%;
+    position: inherit;
+}
+
+.inputEmoji {
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.input {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    resize: none;
+    outline: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding: 1px 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    width: calc(100% - 20px - 20px - 24px - 10px - 10px - 10px);
+}
+
+.input::placeholder {
+    color: #9A9F9F;
+}
+
+.inputField {
+    padding: 0 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.chatSend {
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+}
+
+emoji-picker {
+    position: absolute;
+    z-index: 2 !important;
+    width: calc(100% + 2px);
+    bottom: calc(100% + 5px);
+    left: -1px;
+    display: none;
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+}
+
+.headerShape1 {
+    position: absolute;
+    z-index: -1;
+    width: 250px;
+    height: auto;
+    display: block;
+    left: -125px;
+    top: -120px;
+}
+
+.headerShape2 {
+    position: absolute;
+    z-index: -1;
+    width: 89px;
+    height: auto;
+    display: block;
+    left: 356px;
+    top: -45px;
+}
+
+.headerShape3 {
+    position: absolute;
+    z-index: -1;
+    width: 657px;
+    height: auto;
+    display: block;
+    right: -319px;
+    top: 14px;
+}
+
+.header, .questions, .program, .businessCards, .alphaButton {
+    margin-top: 90px;
+}
+
+.alphaButton {
+    margin-bottom: 90px;
+}
+
+.questionsLabel, .programLabel, .businessCardsLabel {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.programLabel {
+    margin-bottom: 15px;
+}
+
+.questionSend {
+    width: 147px;
+    background: #E7362A;
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 18px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.questionInput {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    resize: none;
+    outline: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    width: 100%;
+    margin-right: 20px;
+    background: #404040;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    padding: 7px 16px 19px;
+}
+
+.questionInput::placeholder {
+    color: #9A9F9F;
+}
+
+.questionBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.questionsShape {
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: auto;
+    display: block;
+    right: 47px;
+    bottom: -45px;
+}
+
+.programLine {
+    height: 1px;
+    width: 100%;
+    background-color: #048783;
+}
+
+.programData {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 0 14px;
+}
+
+.programTime {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    background: #E7362A;
+    border-radius: 100px;
+    width: 132px;
+    padding: 6px 0;
+}
+
+.programText {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: calc(100% - 132px - 28px);
+    margin-left: 28px;
+    margin-top: 6px;
+}
+
+.programText span {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: block;
+    color: #999999;
+    margin-top: 5px;
+}
+
+.programShape1 {
+    position: absolute;
+    z-index: -1;
+    width: 42px;
+    height: auto;
+    display: block;
+    right: 20px;
+    top: 11px;
+}
+
+.speakers {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.speakerBlock {
+    max-width: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 45px;
+}
+
+.speakerImg {
+    width: 260px;
+    height: 260px;
+}
+
+.speakerName {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #E7362A;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.speakerPost {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #999999;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.speakerInfo {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.speakerBlockClosing {
+    margin: 0;
+}
+
+.businessCardsBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.businessCard {
+    max-width: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 15px;
+    background-color: #2E2E2E;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.businessCardName {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.businessCardPost {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E7362A;
+    margin-top: 5px;
+}
+
+.businessCardPlace {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.businessCardLink {
+    font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.businessCardLink a {
+    text-decoration: none;
+    color: #ABABAB;
+}
+
+.businessCardLink img {
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.businessCardsShape1 {
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: auto;
+    display: block;
+    right: 160px;
+    top: 10px;
+}
+
+.alphaButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alphaButton a {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: #E7362A;
+    padding: 18px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.alphaButtonShape1 {
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: auto;
+    display: block;
+    left: 20px;
+    bottom: -50px;
+}
+
+.alphaButtonShape2 {
+    position: absolute;
+    z-index: -1;
+    width: 42px;
+    height: auto;
+    display: block;
+    right: 40px;
+    bottom: -22px;
+}
+
+.alphaButtonBlock {
+    position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+    .blockMax1160 {
+        max-width: 620px;
+    }
+    .menuItem span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .video {
+        max-width: 100%;
+        width: 100%;
+    }
+    .chat {
+        height: 320px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto !important;
+    }
+    .chatLabelText {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .messageName {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .messageText {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .input {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .questionsLabel, .programLabel, .businessCardsLabel {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .questionSend {
+        width: 135px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .questionInput {
+        max-width: 465px;
+        width: calc(100% - 135px - 20px);
+    }
+    .programTime {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 6px 0;
+        width: 120px;
+    }
+    .programText {
+        width: calc(100% - 120px - 30px);
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .programText span {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 8px;
+    }
+    .speakerBlock {
+        max-width: 300px;
+        align-items: center;
+    }
+    .speakerImg {
+        width: 196px;
+        height: 196px;
+    }
+    .speakerName {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .speakerPost {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .speakerInfo {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .businessCard {
+        max-width: 300px;
+    }
+    .businessCardName {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .businessCardPost {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .businessCardPlace {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .businessCardLink {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .alphaButton a {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 20px;
+    }
+    .headerShape1 {
+        top: -76px;
+        left: -126px;
+    }
+    .headerShape2 {
+        display: none;
+    }
+    .headerShape3 {
+        top: 62px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .blockMax1160 {
+        max-width: 300px;
+    }
+    .questionInput {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    .questionSend {
+        width: 100%;
+    }
+    .questionBlock {
+        flex-wrap: wrap;
+    }
+    .menuItem {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menuItem span {
+        margin: 8px 10px 0;
+    }
+    .menu {
+        padding: 16px 0 0;
+    }
+    .programText {
+        margin: 15px 0 0;
+        width: 100%;
+    }
+    .programData {
+        flex-wrap: wrap;
+    }
+    .alphaButton a {
+        padding: 6px 20px;
+    }
+    .headerShape1 {
+        top: -79px;
+        left: -115px;
+    }
+    .headerShape3 {
+        display: none;
+    }
+    .questionsShape {
+        right: 199px;
+    }
+    .businessCardsShape1 {
+        top: 0;
+        right: 48px;
+    }
+    .programText span {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>АЛЬФА DIGITAL OPEN</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="generator" content="N/A">
+    <meta name="language" content="Russian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link type="text/css" rel="stylesheet" href="./fonts/fonts.css">
+    <link type="text/css" rel="stylesheet" href="./css/index.css">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <div class="logo">
+            <img src="./images/head.png" alt="">
+        </div>
+
+        <div class="menu">
+            <div class="menuItem">
+                <span onclick="scrollToBlock('.program')" id="menuLeft">Программа</span>
+                <span onclick="scrollToBlock('.speakers')">Спикеры</span>
+                <span onclick="scrollToBlock('.businessCards')" id="menuRight">Визитки&nbsp;участников</span>
+            </div>
+            <script>
+                let scrollToBlock = (id) => {
+                    document.querySelector(id).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            </script>
+        </div>
+
+        <div class="blockMax1160 header">
+            <div class="video">
+                <script src="https://facecast.net/w/js/iframe.js"></script><iframe id="m8rn5g"
+                    onload="fc_load_iframe(this)" class="videoFrame" width="100%" height="100%" style="border:none"
+                    allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <script type="text/javascript">
+                let video = document.querySelector(".video")
+                videoBlock = document.querySelector(".header");
+
+                videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+                video.style.height = video.offsetWidth / 16 * 9 + "px";
+
+                window.addEventListener("resize", () => {
+                    videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+                    video.style.height = video.offsetWidth / 16 * 9 + "px";
+                })
+            </script>
+            <div class="chat">
+                <div class="chatLabel">
+                    <p class="chatLabelText">
+                        Общий чат
+                    </p>
+                </div>
+
+                <div class="messages">
+                    <div class="message">
+                        <p class="messageName">
+                            Иван
+                        </p>
+                        <p class="messageText">
+                            Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Иван
+                        </p>
+                        <p class="messageText">
+                            Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                    <div class="message messageMine">
+                        <p class="messageName">
+                            Сергей
+                        </p>
+                        <p class="messageText">
+                            Что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Иван
+                        </p>
+                        <p class="messageText">
+                            Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Иван
+                        </p>
+                        <p class="messageText">
+                            Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="inputField">
+                    <div class="inputFieldBg">
+                        <img src="./images/sticker.png" alt="" class="inputEmoji" onclick="showEmoji();">
+                        <img src="./images/emoji.png" alt="" class="inputEmoji" onclick="showEmoji();">
+                        <!-- <textarea class="input" id="textarea" name="message" rows="1" value="" placeholder="Введите сообщение"></textarea> -->
+                        <input type="text" class="input" id="textarea" name="message" value="" placeholder="Введите сообщение">
+                        <img src="./images/send.png" alt="" class="chatSend">
+
+                        <emoji-picker class="dark" id="emoji1" data-show="0" locale="ru"></emoji-picker>
+                        <script>
+                                document.querySelector('#emoji1').addEventListener('emoji-click', (event) => {
+                                    let position = document.querySelector("#textarea").selectionStart,
+                                        val = document.querySelector("#textarea").value,
+                                        lenOld = document.querySelector("#textarea").value.length;
+                                    document.querySelector("#textarea").value = [val.slice(0, position), event.detail.unicode, val.slice(position)].join('');
+                                    document.querySelector("#textarea").focus();
+                                    document.querySelector("#textarea").selectionEnd = position + document.querySelector("#textarea").value.length - lenOld;
+                                });
+
+                                let showEmoji = () => {
+                                    let status = document.querySelector('#emoji1').dataset.show;
+
+                                    if (status == 0) {
+                                        document.querySelector('#emoji1').style.display = "block";
+                                        document.querySelector('#emoji1').dataset.show = 1;
+                                    } else {
+                                        document.querySelector('#emoji1').style.display = "none";
+                                        document.querySelector('#emoji1').dataset.show = 0;
+                                    }
+                                }
+                            </script>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./images/header-shape-1.png" alt="" class="headerShape1">
+            <img src="./images/header-shape-2.png" alt="" class="headerShape2">
+            <img src="./images/header-shape-3.png" alt="" class="headerShape3">
+        </div>
+
+        <div class="blockMax1160 questions">
+            <p class="questionsLabel">Задай вопрос спикеру</p>
+            <div class="questionBlock">
+                <textarea class="questionInput" id="textarea" name="message" rows="2" value="" placeholder="Вопрос спикеру"></textarea>
+                <span class="questionSend">Отправить</span>
+            </div>
+
+            <img src="./images/questions-shape.png" alt="" class="questionsShape">
+        </div>
+
+        <div class="blockMax1160 program" id="program">
+            <p class="programLabel">Программа</p>
+
+            <div class="programBlock">
+                <div class="programLine"></div>
+                <div class="programData">
+                    <span class="programTime">
+                        11:00 - 11:20
+                    </span>
+                    <p class="programText">
+                        Открытие Alfa Digital Open
+                        <span>Владимир Верхошинский, Иван Пятков</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        11:20 - 11:35
+                    </span>
+                    <p class="programText">
+                        Запуск уникального центра исследований пользовательского опыта в Альфа-Банке
+                        <span>Юрий Солодовников</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        11:45 - 12:00
+                    </span>
+                    <p class="programText">
+                        Digital: Нанимаем и не теряем
+                        <span>Марат Исмагулов, Владимир Демченков, Юлия Фомина</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        12:00 - 12:15
+                    </span>
+                    <p class="programText">
+                        Цифровые технологии обслуживания в оффлайне. Phygital - новый формат сервиса!
+                        <span>Дамир Баттулин, Елена Тятенкова</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        12:25 - 12:40
+                    </span>
+                    <p class="programText">
+                        Вовлекай и властвуй. Персонализация как инструмент управления.
+                        <span>Ярослав Виниченко, Александр Вшивцев, Сергей Тариченко</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        12:40 - 12:55
+                    </span>
+                    <p class="programText">
+                        Продвинутая аналитика в Альфе
+                        <span>Алексей Каширин</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        13:05 - 13:20
+                    </span>
+                    <p class="programText">
+                        Эволюция банковского мобильного приложения по обслуживанию юридических лиц и индивидуальных предпринимателей Альфа Бизнес Мобайл от создания до наших времен
+                        <span>Сергей Паршиков</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        13:20 - 13:35
+                    </span>
+                    <p class="programText">
+                        Альфа-Мобайл 2021. Создание лучшего мобильного банка
+                        <span>Борис Гаврилов</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        13:35 - 13:50
+                    </span>
+                    <p class="programText">
+                        Как мы перезапускали Альфа-Инвестиции
+                        <span>Арсений Добкин</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        14:00 - 14:15
+                    </span>
+                    <p class="programText">
+                        Make Web Great Again! Как мы обновили интернет-банк
+                        <span>Владимир Китляр, Нина Красавина</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        14:25 - 14:40
+                    </span>
+                    <p class="programText">
+                        Голосовой финансовый помощник Alf. Сказано - сделано!
+                        <span>Владимир Китляр, Анастасия Королева, Станислав Комаров</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        14:40 - 15:00
+                    </span>
+                    <p class="programText">
+                        Блогеры — наше всё
+                        <span>Тимур Зулкарнаев, Евгения Шашева</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        15:00-15:10
+                    </span>
+                    <p class="programText">
+                        Блиц-интервью с блогером "Как сделать успешную интеграцию?"
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        15:10 - 15:25
+                    </span>
+                    <p class="programText">
+                        Платформа цифровых продаж. Игра началась
+                        <span>Антон Сафонов</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        15:35 - 15:50
+                    </span>
+                    <p class="programText">
+                        X5 Карта. Финансовый сервис в мобильных приложениях торговых сетей
+                        <span>Владимир Ястребков</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <div class="programBlock">
+                <div class="programData">
+                    <span class="programTime">
+                        16:00 - 16:05
+                    </span>
+                    <p class="programText">
+                        Завершение Alfa Digital Open
+                        <span>Иван Пятков</span>
+                    </p>
+                </div>
+                <div class="programLine"></div>
+            </div>
+
+            <img src="./images/program-shape-1.png" alt="" class="programShape1">
+        </div>
+
+        <div class="blockMax1160 speakers" id="speakers">
+            <div class="speakerBlock">
+                <img src="./images/speakers/1.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Иван Пятков
+                </p>
+                <p class="speakerPost">
+                    Chief Digital Officer
+                </p>
+                <p class="speakerInfo">
+                    Модератор экспертной зоны
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/2.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Юрий Солодовников
+                </p>
+                <p class="speakerPost">
+                    Руководитель Alfa Research Center
+                </p>
+                <p class="speakerInfo">
+                    Запуск уникального центра исследований пользовательского опыта в Альфа-Банке
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/3.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Марат Исмагулов
+                </p>
+                <p class="speakerPost">
+                    HR Director
+                </p>
+                <p class="speakerInfo">
+                    Digital: Нанимаем и не теряем
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/4.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Владимир Демченков
+                </p>
+                <p class="speakerPost">
+                    Head of IT Recruitment
+                </p>
+                <p class="speakerInfo">
+                    Digital: Нанимаем и не теряем
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/5.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Юлия Фомина
+                </p>
+                <p class="speakerPost">
+                    Head of HR Brand development
+                </p>
+                <p class="speakerInfo">
+                    Digital: Нанимаем и не теряем
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/6.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Дамир Баттулин
+                </p>
+                <p class="speakerPost">
+                    Head of Digital chanel
+                </p>
+                <p class="speakerInfo">
+                    Цифровые технологии обслуживания в оффлайне.<br />Phygital - новый формат сервиса!
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/7.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Елена Тятенкова
+                </p>
+                <p class="speakerPost">
+                    Project Manager Phygital
+                </p>
+                <p class="speakerInfo">
+                    Цифровые технологии обслуживания в оффлайне.<br />Phygital - новый формат сервиса!
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/8.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Ярослав Виниченко
+                </p>
+                <p class="speakerPost">
+                    Head of Customer Lifecycle Management
+                </p>
+                <p class="speakerInfo">
+                    Вовлекай и властвуй. Персонализация как инструмент управления
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/9.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Александр Вшивцев
+                </p>
+                <p class="speakerPost">
+                    Head of CRM business development
+                </p>
+                <p class="speakerInfo">
+                    Вовлекай и властвуй. Персонализация как инструмент управления
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/10.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Сергей Тариченко
+                </p>
+                <p class="speakerPost">
+                    Head of CRM analytics
+                </p>
+                <p class="speakerInfo">
+                    Вовлекай и властвуй. Персонализация как инструмент управления
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/11.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Алексей Каширин
+                </p>
+                <p class="speakerPost">
+                    Chief AI Officer
+                </p>
+                <p class="speakerInfo">
+                    Продвинутая аналитика в Альфе
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/12.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Сергей Паршиков
+                </p>
+                <p class="speakerPost">
+                    Head of сorporate digital chanel
+                </p>
+                <p class="speakerInfo">
+                    Эволюция банковского мобильного приложения по обслуживанию юридических лиц и индивидуальных предпринимателей Альфа Бизнес Мобайл от создания до наших времен
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/13.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Борис Гаврилов
+                </p>
+                <p class="speakerPost">
+                    Head of retail digital chanel
+                </p>
+                <p class="speakerInfo">
+                    Альфа-Мобайл 2021. Создание лучшего мобильного банка
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/14.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Арсений Добкин
+                </p>
+                <p class="speakerPost">
+                    Head of Product Альфа-Инвестиции
+                </p>
+                <p class="speakerInfo">
+                    Как мы перезапускали Альфа-Инвестиции
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/15.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Анастасия Королева
+                </p>
+                <p class="speakerPost">
+                    Product Owner Alf
+                </p>
+                <p class="speakerInfo">
+                    Голосовой финансовый помощник Alf. Сказано - сделано!
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/16.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Станислав Комаров
+                </p>
+                <p class="speakerPost">
+                    Product Owner Alf
+                </p>
+                <p class="speakerInfo">
+                    Голосовой финансовый помощник Alf. Сказано - сделано!
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/17.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Владимир Китляр
+                </p>
+                <p class="speakerPost">
+                    Лидер Alfa Digital Spb
+                </p>
+                <p class="speakerInfo">
+                    Make Web Great Again! Как мы обновили интернет-банк
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/18.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Нина Красавина
+                </p>
+                <p class="speakerPost">
+                    Product Owner New Alfa-Click
+                </p>
+                <p class="speakerInfo">
+                    Make Web Great Again! Как мы обновили интернет-банк
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/19.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Тимур Зулкарнаев
+                </p>
+                <p class="speakerPost">
+                    Head of business-marketing
+                </p>
+                <p class="speakerInfo">
+                    Альфа-Банк и блогеры
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/20.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Евгения Шашева
+                </p>
+                <p class="speakerPost">
+                    Head of digital sales
+                </p>
+                <p class="speakerInfo">
+                    Блогеры — наше всё
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/21.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Антон Сафонов
+                </p>
+                <p class="speakerPost">
+                    Руководитель департамента онлайн продаж
+                </p>
+                <p class="speakerInfo">
+                    Платформа цифровых продаж. Игра началась
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/22.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Владимир Ястребков
+                </p>
+                <p class="speakerPost">
+                    Founder, Internal Digital startup
+                </p>
+                <p class="speakerInfo">
+                    X5 Карта. Финансовый сервис в мобильных приложениях торговых сетей
+                </p>
+            </div>
+
+            <div class="speakerBlock speakerBlockClosing"></div>
+            <div class="speakerBlock speakerBlockClosing"></div>
+        </div>
+
+        <div class="blockMax1160 businessCards" id="businessCards">
+            <p class="businessCardsLabel">
+                Визитки участников
+            </p>
+            <div class="businessCardsBlock">
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+
+                <div class="businessCard">
+                    <p class="businessCardName">
+                        Иванов Сергей
+                    </p>
+                    <p class="businessCardPost">
+                        Senior Product Owner
+                    </p>
+                    <p class="businessCardPlace">
+                        Aльфа Банк
+                    </p>
+                    <p class="businessCardLink">
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                    </p>
+                </div>
+            </div>
+
+            <img src="./images/business-cards-shape-1.png" alt="" class="businessCardsShape1">
+        </div>
+
+        <div class="blockMax1160 alphaButton" id="alphaButton">
+            <div class="alphaButtonBlock">
+                <a href="">Хочу присоединиться к команде Альфа-Банка</a>
+
+                <img src="./images/alphabutton-shape-1.png" alt="" class="alphaButtonShape1">
+                <img src="./images/program-shape-1.png" alt="" class="alphaButtonShape2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let showBlock = (block, margin, showType) => {
+            if (window.scrollY + window.innerHeight >= block.offsetTop + margin && (block.dataset.flag == 0 || block.dataset.flag == undefined)) {
+                block.dataset.flag = 1;
+                block.classList += ' ' + showType;
+            }
+        }
+
+        let showBlocks = () => {
+            let block1 = document.querySelector('#program'),
+                block2 = document.querySelector('#speakers'),
+                block3 = document.querySelector('#businessCards'),
+                block4 = document.querySelector('#alphaButton');
+
+            showBlock(block1, 200, 'showBlockBottom');
+            showBlock(block2, 200, 'showBlockBottom');
+            showBlock(block3, 200, 'showBlockBottom');
+            showBlock(block4, 100, 'showBlockBottom');
+        }
+
+        window.onload = () => {
+            showBlocks();
+        }
+
+        window.addEventListener('scroll', (e) => {
+            showBlocks();
+        });
+    </script>
+</body>
+
+</html>
