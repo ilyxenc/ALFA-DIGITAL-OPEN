@@ -31,7 +31,9 @@ body {
     overflow: hidden;
     min-height: 100vh;
 }
+
 /* , #menuLeft, #menuRight */
+
 #program, #speakers, #businessCards, #alfaButton {
     opacity: 0;
     position: relative;
@@ -264,6 +266,11 @@ body {
     cursor: pointer;
 }
 
+.button:hover {
+    /* transition: 0.3s !important; */
+    opacity: 0.8 !important;
+}
+
 .input {
     font-family: 'Styrene B LC', Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -282,7 +289,7 @@ body {
     border: none;
     background-color: transparent;
     color: #FFFFFF;
-    width: calc(100% - 20px - 20px - 24px - 10px - 10px - 10px);
+    width: calc(100% - 20px - 24px - 10px - 10px);
 }
 
 .input::placeholder {
@@ -806,6 +813,12 @@ emoji-picker {
 }
 
 @media only screen and (max-width: 668px) {
+    #menuLeftMobile {
+        opacity: 0;
+        position: relative;
+        animation: showBlockLeft 0.75s ease;
+        animation-fill-mode: forwards;
+    }
     .blockMax1160 {
         max-width: 300px;
     }

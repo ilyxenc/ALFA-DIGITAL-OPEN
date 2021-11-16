@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>АЛЬФА DIGITAL OPEN</title>
+
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild3137-6232-4162-a538-616366326663/favicon.ico" type="image/x-icon">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -26,9 +29,9 @@
 
         <div class="menu">
             <div class="menuItem">
-                <span onclick="scrollToBlock('.program')" id="menuLeft">Программа</span>
-                <span onclick="scrollToBlock('.speakers')">Спикеры</span>
-                <span onclick="scrollToBlock('.businessCards')" id="menuRight">Визитки&nbsp;участников</span>
+                <span class="button" onclick="scrollToBlock('.program')" id="menuLeft">Программа</span>
+                <span class="button" onclick="scrollToBlock('.speakers')" id="menuLeftMobile">Спикеры</span>
+                <span class="button" onclick="scrollToBlock('.businessCards')" id="menuRight">Визитки&nbsp;участников</span>
             </div>
             <script>
                 let scrollToBlock = (id) => {
@@ -110,11 +113,10 @@
 
                 <div class="inputField">
                     <div class="inputFieldBg">
-                        <img src="./images/sticker.png" alt="" class="inputEmoji" onclick="showEmoji();">
-                        <img src="./images/emoji.png" alt="" class="inputEmoji" onclick="showEmoji();">
+                        <img src="./images/emoji.png" alt="" class="inputEmoji button" onclick="showEmoji();">
                         <!-- <textarea class="input" id="textarea" name="message" rows="1" value="" placeholder="Введите сообщение"></textarea> -->
                         <input type="text" class="input" id="textarea" name="message" value="" placeholder="Введите сообщение">
-                        <img src="./images/send.png" alt="" class="chatSend">
+                        <img src="./images/send.png" alt="" class="chatSend button">
 
                         <emoji-picker class="dark" id="emoji1" data-show="0" locale="ru"></emoji-picker>
                         <script>
@@ -152,7 +154,7 @@
             <p class="questionsLabel">Задай вопрос спикеру</p>
             <div class="questionBlock">
                 <textarea class="questionInput" id="textarea" name="message" rows="2" value="" placeholder="Вопрос спикеру"></textarea>
-                <span class="questionSend">Отправить</span>
+                <span class="questionSend button">Отправить</span>
             </div>
 
             <img src="./images/questions-shape.png" alt="" class="questionsShape">
@@ -299,7 +301,7 @@
                     </span>
                     <p class="programText">
                         Голосовой финансовый помощник Alf. Сказано - сделано!
-                        <span>Владимир Китляр, Анастасия Королева, Станислав Комаров</span>
+                        <span>Владимир Китляр, Анастасия Королёва, Станислав Комаров</span>
                     </p>
                 </div>
                 <div class="programLine"></div>
@@ -444,7 +446,7 @@
                     Дамир Баттулин
                 </p>
                 <p class="speakerPost">
-                    Head of Digital chanel
+                    Head of Digital channel
                 </p>
                 <p class="speakerInfo">
                     Цифровые технологии обслуживания в оффлайне.<br />Phygital - новый формат сервиса!
@@ -522,7 +524,7 @@
                     Сергей Паршиков
                 </p>
                 <p class="speakerPost">
-                    Head of сorporate digital chanel
+                    Head of сorporate digital channel
                 </p>
                 <p class="speakerInfo">
                     Эволюция банковского мобильного приложения по обслуживанию юридических лиц и индивидуальных предпринимателей Альфа Бизнес Мобайл от создания до наших времен
@@ -535,7 +537,7 @@
                     Борис Гаврилов
                 </p>
                 <p class="speakerPost">
-                    Head of retail digital chanel
+                    Head of retail digital channel
                 </p>
                 <p class="speakerInfo">
                     Альфа-Мобайл 2021. Создание лучшего мобильного банка
@@ -556,9 +558,35 @@
             </div>
 
             <div class="speakerBlock">
+                <img src="./images/speakers/17.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Владимир Китляр
+                </p>
+                <p class="speakerPost">
+                    Head of Alfa Digital Spb
+                </p>
+                <p class="speakerInfo">
+                    Make Web Great Again! Как мы обновили интернет-банк
+                </p>
+            </div>
+
+            <div class="speakerBlock">
+                <img src="./images/speakers/18.png" alt="" class="speakerImg">
+                <p class="speakerName">
+                    Нина Красавина
+                </p>
+                <p class="speakerPost">
+                    Product Owner New Alfa-Click
+                </p>
+                <p class="speakerInfo">
+                    Make Web Great Again! Как мы обновили интернет-банк
+                </p>
+            </div>
+
+            <div class="speakerBlock">
                 <img src="./images/speakers/15.png" alt="" class="speakerImg">
                 <p class="speakerName">
-                    Анастасия Королева
+                    Анастасия Королёва
                 </p>
                 <p class="speakerPost">
                     Product Owner Alf
@@ -582,32 +610,6 @@
             </div>
 
             <div class="speakerBlock">
-                <img src="./images/speakers/17.png" alt="" class="speakerImg">
-                <p class="speakerName">
-                    Владимир Китляр
-                </p>
-                <p class="speakerPost">
-                    Лидер Alfa Digital Spb
-                </p>
-                <p class="speakerInfo">
-                    Make Web Great Again! Как мы обновили интернет-банк
-                </p>
-            </div>
-
-            <div class="speakerBlock">
-                <img src="./images/speakers/18.png" alt="" class="speakerImg">
-                <p class="speakerName">
-                    Нина Красавина
-                </p>
-                <p class="speakerPost">
-                    Product Owner New Alfa-Click
-                </p>
-                <p class="speakerInfo">
-                    Make Web Great Again! Как мы обновили интернет-банк
-                </p>
-            </div>
-
-            <div class="speakerBlock">
                 <img src="./images/speakers/19.png" alt="" class="speakerImg">
                 <p class="speakerName">
                     Тимур Зулкарнаев
@@ -616,7 +618,7 @@
                     Head of business-marketing
                 </p>
                 <p class="speakerInfo">
-                    Альфа-Банк и блогеры
+                    Блогеры — наше всё
                 </p>
             </div>
 
@@ -626,7 +628,7 @@
                     Евгения Шашева
                 </p>
                 <p class="speakerPost">
-                    Head of digital sales
+                    Head of internet sales and analytics
                 </p>
                 <p class="speakerInfo">
                     Блогеры — наше всё
@@ -639,7 +641,7 @@
                     Антон Сафонов
                 </p>
                 <p class="speakerPost">
-                    Руководитель департамента онлайн продаж
+                    Head of digital sales and platform solutions
                 </p>
                 <p class="speakerInfo">
                     Платформа цифровых продаж. Игра началась
@@ -854,7 +856,7 @@
 
         <div class="blockMax1160 alfaButton" id="alfaButton">
             <div class="alfaButtonBlock">
-                <a href="">Хочу присоединиться к команде Альфа-Банка</a>
+                <a class="button" href="">Хочу присоединиться к команде Альфа-Банка</a>
 
                 <img src="./images/alfabutton-shape-1.png" alt="" class="alfaButtonShape1">
                 <img src="./images/program-shape-1.png" alt="" class="alfaButtonShape2">
