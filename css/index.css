@@ -49,6 +49,7 @@ body {
         opacity: 0;
         bottom: -100px;
     }
+
     100% {
         opacity: 1;
         bottom: 0px;
@@ -65,6 +66,7 @@ body {
         opacity: 0;
         left: -100px;
     }
+
     100% {
         opacity: 1;
         left: 0px;
@@ -81,6 +83,7 @@ body {
         opacity: 0;
         right: -100px;
     }
+
     100% {
         opacity: 1;
         right: 0px;
@@ -150,6 +153,50 @@ body {
     margin: 0 auto;
     padding: 0 10px;
     position: relative;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: stretch;
+    margin-top: 77px;
+}
+
+.infoShape {
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: auto;
+    display: block;
+    left: -99px;
+    top: 12px;
+}
+
+.infoStyle {
+    width: 4px;
+    background-color: #E7362A;
+}
+
+.info p {
+    font-family: 'Styrene A LC', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 20px;
+    width: calc(100% - 24px);
+}
+
+.info p a {
+    color: #E30521;
+    outline: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    text-decoration: underline;
 }
 
 .video {
@@ -327,7 +374,7 @@ emoji-picker {
     height: auto;
     display: block;
     left: -125px;
-    top: -120px;
+    top: -55px;
 }
 
 .headerShape2 {
@@ -350,7 +397,11 @@ emoji-picker {
     top: 14px;
 }
 
-.header, .questions, .program, .businessCards, .alfaButton {
+.header {
+    margin-top: 106px;
+}
+
+.questions, .program, .businessCards, .alfaButton {
     margin-top: 90px;
 }
 
@@ -692,121 +743,149 @@ emoji-picker {
     .blockMax1160 {
         max-width: 620px;
     }
+
     .menuItem span {
         font-size: 18px;
         line-height: 24px;
     }
+
     .video {
         max-width: 100%;
         width: 100%;
     }
+
     .chat {
         height: 320px;
         max-width: 100%;
         width: 100%;
     }
+
     .header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: auto !important;
     }
+
     .chatLabelText {
         font-size: 16px;
         line-height: 21px;
     }
+
     .messageName {
         font-size: 12px;
         line-height: 16px;
     }
+
     .messageText {
         font-size: 12px;
         line-height: 16px;
     }
+
     .input {
         font-size: 12px;
         line-height: 16px;
     }
+
     .questionsLabel, .programLabel, .businessCardsLabel {
         font-size: 18px;
         line-height: 24px;
     }
+
     .questionSend {
         width: 135px;
         font-size: 16px;
         line-height: 20px;
     }
+
     .questionInput {
         max-width: 465px;
         width: calc(100% - 135px - 20px);
     }
+
     .programTime {
         font-size: 16px;
         line-height: 21px;
         padding: 6px 0;
         width: 120px;
     }
+
     .programText {
         width: calc(100% - 120px - 30px);
         font-size: 16px;
         line-height: 21px;
     }
+
     .programText span {
         font-size: 14px;
         line-height: 18px;
         margin-top: 8px;
     }
+
     .speakerBlock {
         max-width: 300px;
         align-items: center;
     }
+
     .speakerImg {
         width: 196px;
         height: 196px;
     }
+
     .speakerName {
         font-size: 16px;
         line-height: 21px;
     }
+
     .speakerPost {
         font-size: 14px;
         line-height: 18px;
     }
+
     .speakerInfo {
         font-size: 14px;
         line-height: 18px;
     }
+
     .businessCard {
         max-width: 300px;
     }
+
     .businessCardName {
         font-size: 16px;
         line-height: 21px;
     }
+
     .businessCardPost {
         font-size: 14px;
         line-height: 18px;
     }
+
     .businessCardPlace {
         font-size: 12px;
         line-height: 16px;
     }
+
     .businessCardLink {
         font-size: 14px;
         line-height: 18px;
     }
+
     .alfaButton a {
         font-size: 16px;
         line-height: 22px;
         padding: 16px 20px;
     }
+
     .headerShape1 {
         top: -76px;
         left: -126px;
     }
+
     .headerShape2 {
         display: none;
     }
+
     .headerShape3 {
         top: 62px;
     }
@@ -819,53 +898,68 @@ emoji-picker {
         animation: showBlockLeft 0.75s ease;
         animation-fill-mode: forwards;
     }
+
     .blockMax1160 {
         max-width: 300px;
     }
+
     .questionInput {
         width: 100%;
         margin: 0 0 10px;
     }
+
     .questionSend {
         width: 100%;
     }
+
     .questionBlock {
         flex-wrap: wrap;
     }
+
     .menuItem {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .menuItem span {
         margin: 8px 10px 0;
     }
+
     .menu {
         padding: 16px 0 0;
     }
+
     .programText {
         margin: 15px 0 0;
         width: 100%;
     }
+
     .programData {
         flex-wrap: wrap;
     }
+
     .alfaButton a {
         padding: 6px 20px;
     }
+
     .headerShape1 {
         top: -79px;
         left: -115px;
     }
+
     .headerShape3 {
         display: none;
     }
+
     .questionsShape {
         right: 199px;
     }
+
     .businessCardsShape1 {
         top: 0;
         right: 48px;
     }
+
     .programText span {
         margin-top: 5px;
     }
