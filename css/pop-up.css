@@ -313,3 +313,18 @@
 .popUpThanks .popUpCaption {
     text-align: center;
 }
+
+@media only screen and (max-height: 750px) {
+    .popUpInfo {
+        padding: 20px 40px;
+    }
+
+    .popUpForm input[type=text] {
+        padding: 5px 12px;
+        line-height: 16px;
+    }
+
+    .popUpSubmit {
+        margin: 20px auto 0;
+    }
+}
