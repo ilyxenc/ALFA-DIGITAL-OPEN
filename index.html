@@ -874,6 +874,10 @@
             resizeCards();
         }
 
+        window.addEventListener('resize', function(event){
+            resizeCards();
+        });
+
         window.addEventListener('scroll', (e) => {
             showBlocks();
         });
