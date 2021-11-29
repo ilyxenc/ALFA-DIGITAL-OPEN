@@ -656,7 +656,7 @@
                         Aльфа Банк
                     </p>
                     <p class="businessCardLink">
-                        <a href="mailto:s.ivanov@alfabank.ru">s.ivanov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
+                        <a href="mailto:s.ivanov@alfabank.ru">s.ivafelkrjgnkremfrgnov@alfabank.ru</a> <a href=""> <img src="./images/f.png" alt=""> </a>
                     </p>
                 </div>
 
@@ -859,8 +859,19 @@
             showBlock(block4, 100, 'showBlockBottom');
         }
 
+        let resizeCards = () => {
+            let cards = document.querySelectorAll('.businessCardLink');
+
+            cards.forEach((el) => {
+                if (el.querySelector('a').offsetWidth > 204) {
+                    el.style.fontSize = 16 * 204 / el.querySelector('a').offsetWidth + 'px';
+                }
+            })
+        }
+
         window.onload = () => {
             showBlocks();
+            resizeCards();
         }
 
         window.addEventListener('scroll', (e) => {
